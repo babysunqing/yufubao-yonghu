@@ -1,0 +1,24 @@
+<!--pages/instruction/instruction.wxml-->
+<view class="container">
+  <view class="main">
+    <view class="top">
+      <view class="line"> </view>
+      <view class="title">卡券说明</view>
+    </view>
+
+    <view class="explainDetail">
+      <view class="explainItem">
+        1、会员卡只在本中心声明范围内有效。
+      </view>
+      <view class="explainItem">
+        2、会员享受会员服务及处理相关事项时，须出示会员卡，如未出示产生的费用由会员承担。
+      </view>
+      <view class="explainItem">
+        3、会员持卡消费可享受的会员服务及优惠政策则另行公告。
+      </view>
+      <view class="explainItem">
+        4、会员可至企业网站或拨打服务电话查询个人信息记录。
+      </view>
+    </view>
+  </view>
+</view>

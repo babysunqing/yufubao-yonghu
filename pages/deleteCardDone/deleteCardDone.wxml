@@ -1,0 +1,38 @@
+<!--pages/deleteCardDone/deleteCardDone.wxml-->
+<view class="container">
+  <view class="top">
+    <icon type="success" size="83" color='rgb(186,121,58)' />
+    <text class="gatheringSuccess">申请成功</text>
+    <text class="gatheringMoney">会在15个工作日之内汇款</text>
+  </view>
+
+  <view class="middle">
+    <view class="item">
+      <text class="title">可退金额：</text>
+      <text class="detail">￥200.00</text>
+    </view>
+    <view class="item">
+      <text class="title">开户人姓名：</text>
+      <text class="detail">孙晴</text>
+    </view>
+    <view class="item">
+      <text class="title">退款银行账号：</text>
+      <text class="detail">6217 0032 5000 2584 125</text>
+    </view>
+    <view class="item">
+      <text class="title title2">卡内余额：</text>
+      <text class="detail detail2">￥300.00</text>
+    </view>
+    <view class="item">
+      <text class="title title2">实际余额：</text>
+      <text class="detail detail2">￥200.00</text>
+    </view>
+    <view class="item">
+      <text class="title title2">赠送余额：</text>
+      <text class="detail detail2">￥100.00</text>
+    </view>
+  </view>
+
+  <view class="submit" bindtap="linkToIndex">返回首页</view>
+</view>
+

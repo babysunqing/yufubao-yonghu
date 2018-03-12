@@ -1,0 +1,33 @@
+<!--pages/deleteCard/deleteCard.wxml-->
+<view class="container">
+  <view class="content">
+
+    <view class="InputItem">
+      <view class="title">退款银行账号</view>
+      <input class="input" placeholder-class="placeholder" name="tel" placeholder="请输入退款银行账号" bindinput="userTelInput"/>
+    </view>
+    <view class="InputItem" style="margin-top:40rpx">
+      <view class="title">开户人姓名</view>
+      <input class="input" placeholder-class="placeholder" name="tel" placeholder="请输入开户人姓名" bindinput="userTelInput"/>
+    </view>
+
+    <view class="banlence firstBanlence">
+      <text class="left">卡内余额</text>
+      <text class="right">￥300.00</text>
+    </view>
+    <view class="banlence">
+      <text class="left">实际余额</text>
+      <text class="right">￥200.00</text>
+    </view>
+    <view class="banlence freeBanlence">
+      <text class="left">赠送余额</text>
+      <text class="right">￥100.00</text>
+    </view>
+    <view class="banlence" style="margin-top:16rpx;">
+      <text class="left">可退金额</text>
+      <text class="right">￥200.00</text>
+    </view>
+
+     <view class="done" bindtap="linkToDeleteCardDone">确认销卡</view>
+  </view>
+</view>

@@ -1,0 +1,40 @@
+<!--pages/cardDetail/cardDetail.wxml-->
+<view class="container">
+  <view class="cradItem" bindtap="linkToCardDetail">
+    <view class="cardMian" >
+      <image src="../../image/head.png"></image>
+      <text class="cardTitle">元旦回馈</text>
+      <text class="cardDetail">充200送100</text>        
+    </view>
+    <view class="cardTime">
+      <text class="time">2018-01-01</text>
+    </view>
+  </view>
+
+  <view class="item item1">
+    <view class="title">我的余额</view>
+    <text class="banlence">￥300.00</text>
+  </view>
+
+  <view class="item" bindtap="linkToCashFlow">
+    <view class="title">消费明细</view>
+    <text class="iconfont icon-gengduo"></text>
+  </view>
+
+  <view class="item" bindtap="linkToQRcode">
+    <view class="title">付款码</view>
+    <text class="iconfont icon-gengduo"></text>
+  </view>
+
+  <view class="item" bindtap="linkToDeleteCard">
+    <view class="title">销卡</view>
+    <text class="iconfont icon-gengduo"></text>
+  </view>
+
+  <view class="item" bindtap="linkToInstruction">
+    <view class="title">卡券说明</view>
+    <text class="iconfont icon-gengduo"></text>
+  </view>
+
+</view>
+

@@ -1,0 +1,16 @@
+<!--pages/QRcode/QRcode.wxml-->
+<view class="container">
+  <view class="codeContainer">
+    <image class="cardImg" src="../../image/head.png"></image>
+    <view class="containertitle">付款码</view>
+    <image class="QRcode" src='../../image/timg.png'></image>
+    <view class="line"></view>
+    <view class="codeDetail">
+      <view class="item item1">
+        <text class="itemTitle">卡内余额</text>
+        <text class="itemDetail">￥200.00</text>
+      </view>    
+    </view>
+
+  </view>
+</view>

@@ -1,0 +1,29 @@
+<!--pages/cashFlow/cashFlow.wxml-->
+<view class="container">
+
+  <view class="item item1">
+    <view class="left">
+      <text class="title">名剪001号店</text>
+      <text class="time">2018-02-12 13:45</text>
+    </view>
+    <text class="right">-300.00</text>
+  </view>
+
+  <view class="item">
+    <view class="left">
+      <text class="title">名剪001号店</text>
+      <text class="time">2018-02-12 13:45</text>
+    </view>
+    <text class="right">-300.00</text>
+  </view>
+
+  <view class="item">
+    <view class="left">
+      <text class="title">名剪001号店</text>
+      <text class="time">2018-02-12 13:45</text>
+    </view>
+     <!-- <text class="right">+300.00</text>  -->
+    <text class="right2">+300.00</text>
+  </view>
+  <!-- <text class="bottom">查看更多</text> -->
+</view>
