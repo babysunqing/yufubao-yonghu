@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    check: false,
     count: 0,
     reGet:false,
     phone: '',
@@ -21,6 +22,20 @@ Page({
     this.setData({
       userInputCode: e.detail.value
     })
+  },
+  // 设置 同意协议
+  check: function () {
+    if(this.data.check == false){
+      this.data.check = true
+      this.setData({
+        check: true
+      })
+    }else{
+      this.data.check = false
+      this.setData({
+        check: false
+      })
+    }
   },
   setTime: function () {
     let that = this
@@ -82,6 +97,18 @@ Page({
     })
   },
   login: function () {
+    // debugger
+    if (this.data.check == false) {
+      return false
+    }
+    if (this.data.phone == '' || this.data.userInputCode == ''){
+      wx.showModal({
+        content: '请输入完整信息',
+        showCancel: false,
+        confirmText: '确定',
+      })
+      return false
+    }
     // wx.request({
     //   url: 'http://192.168.0.143:8000/v1/member/checkUserByPhone',
     //   data: {

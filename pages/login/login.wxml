@@ -18,9 +18,11 @@
       bindinput="bindVerificationCodeInput"/>
   </view>
 
-  <view class="submit" bindtap='login'>验证</view>
+  <view class="submit" bindtap='login'  wx:if="{{check == false}}">验证</view>
+  <view class="submit" bindtap='login' wx:if="{{check == true}}" style="background-color: #bf793a;">验证</view>
   <view class="bottom">
-  <checkbox />
+  <image src='../../image/choose_n.png'  wx:if="{{check == false}}" bindtap="check"></image>
+  <image src='../../image/choose_s.png' wx:if="{{check == true}}" bindtap="check"></image>
   我已同意<text>《商户技术和系统服务协议》</text>
   </view>
 </view>

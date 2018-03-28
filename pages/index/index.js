@@ -6,7 +6,23 @@ Page({
   data: {
     userInfo: {},
     hasUserInfo: false,
-    showList: false
+    showList: false,
+    cardList:[
+      {
+        'cardId': '1',
+        'cardName':'元旦回馈',
+        'pay':'200',
+        'give':'100' ,
+        'time':'2018-01-02'    
+      },
+      {
+        'cardId': '2',
+        'cardName': '新年特惠',
+        'pay': '500',
+        'give': '500',
+        'time': '2018-03-02'
+      }
+    ]
   },
   //事件处理函数
   linkToLogin: function () {
@@ -14,9 +30,11 @@ Page({
       url: '../login/login'
     })
   },
-  linkToCardDetail: function () {
+  linkToCardDetail: function (e) {
+    let index =e.currentTarget.dataset.index
+    let cardId = this.data.cardList[index].cardId
     wx.navigateTo({
-      url: '../cardDetail/cardDetail',
+      url: '../cardDetail/cardDetail?cardId=' + cardId
     })
   },
   showList: function () {

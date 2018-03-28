@@ -16,36 +16,20 @@
     </view>
   </view> 
 
-  <view class="cardList" wx:if="{{showList}}">
+  <view class="cardList" wx:if="{{showList}}" wx:for="{{cardList}}" wx:key="{{item}}">
 
-    <view class="cradItem" bindtap="linkToCardDetail">
+    <view class="cradItem" bindtap="linkToCardDetail"  data-index="{{index}}">
       <view class="cardMian" style="background-color: #9cbf3a;">
         <image src="../../image/head.png"></image>
-        <text class="cardTitle">元旦回馈</text>
-        <text class="cardDetail">充200送100</text>        
+        <text class="cardTitle">{{item.cardName}}</text>
+        <text class="cardDetail">充{{item.pay}}送{{item.give}}</text>        
       </view>
       <view class="cardTime">
-        <text class="time">2018-01-01</text>
+        <text class="time">{{item.time}}</text>
         <text class="more iconfont icon-gengduo"></text>
         <text class="clickDetail">查看详情</text>
       </view>
     </view>
-
-    <view class="cradItem" bindtap="linkToCardDetail">
-      <view class="cardMian">
-        <image src="../../image/head.png"></image>
-        <text class="cardTitle">元旦回馈</text>
-        <text class="cardDetail">充200送100</text>        
-      </view>
-      <view class="cardTime">
-        <text class="time">2018-01-01</text>
-        <text class="more iconfont icon-gengduo"></text>
-        <text class="clickDetail">查看详情</text>
-      </view>
-    </view>
-
+    
   </view>
-
-  
-
 </view>

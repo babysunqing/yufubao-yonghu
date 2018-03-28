@@ -5,20 +5,52 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    memberName: '',
+    memeberAccount: ''
   },
-  linkToDeleteCardDone: function() {
-    wx.navigateTo({
-      url: '../deleteCardDone/deleteCardDone',
+  memberNameInput: function (e) {
+    this.setData({
+      memberName: e.detail.value
     })
+  },
+  memeberAccountInput: function (e) {
+    this.setData({
+      memeberAccount: e.detail.value
+    })
+  },
+  DeleteCard: function() {
+    // debugger
+    wx.request({
+      url: 'https://31388152.qcloud.la/welsh/app/ticket/myticket',
+      data: {
+        cardId: this.data.cardId,
+        mcardCode: '12314',
+        phone: 'werwq',
+        memberName: this.data.memberName,
+        memeberAccount: this.data.memeberAccount,
+        deviceIp: '',
+        deviceName: ''
+      },
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      method: "post",
+      success: function (res) {
+        wx.navigateTo({
+          url: '../deleteCardDone/deleteCardDone',
+        })       
+      }
+    })
+    
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.setData({
+      cardId: options.cardId 
+    })
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
